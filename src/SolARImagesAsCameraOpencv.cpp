@@ -127,8 +127,8 @@ namespace OPENCV {
         {
             if (m_is_resolution_set)
             {
-                m_capture.set(CV_CAP_PROP_FRAME_WIDTH, m_resolution.width );
-                m_capture.set( CV_CAP_PROP_FRAME_HEIGHT, m_resolution.height );
+                m_capture.set(cv::VideoCaptureProperties::CAP_PROP_FRAME_WIDTH, m_resolution.width );
+                m_capture.set(cv::VideoCaptureProperties::CAP_PROP_FRAME_HEIGHT, m_resolution.height );
             }
             return FrameworkReturnCode::_SUCCESS;
         }

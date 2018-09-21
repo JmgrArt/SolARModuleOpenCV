@@ -121,7 +121,7 @@ void SolARKeypointDetectorOpencv::detect(const SRef<Image> &image, std::vector<S
     cv::Mat opencvImage = SolAROpenCVHelper::mapToOpenCV(image);
 
     cv::Mat img_1;
-    cvtColor( opencvImage, img_1, CV_BGR2GRAY );
+    cvtColor( opencvImage, img_1, COLOR_BGR2GRAY );
     cv::resize(img_1, img_1, Size(img_1.cols*m_imageRatio,img_1.rows*m_imageRatio), 0, 0);
 
     try

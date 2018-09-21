@@ -72,7 +72,8 @@ namespace SolAR {
 							cldm.row(i)(2) = pcloud[i]->getZ();
 						}
 						cv::Mat_<double> mean;
-						cv::PCA pca(cldm, mean, CV_PCA_DATA_AS_ROW);
+	
+						cv::PCA pca(cldm, mean, cv::PCA::Flags::DATA_AS_ROW);
 
 						int num_inliers = 0;
 						cv::Vec3d nrm = pca.eigenvectors.row(2); nrm = nrm / norm(nrm);

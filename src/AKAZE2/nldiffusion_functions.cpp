@@ -24,7 +24,7 @@
 
 #include <opencv2/core.hpp>
 #include <opencv2/imgproc.hpp>
-
+#include <opencv2/imgproc/types_c.h>
 #include "nldiffusion_functions.h"
 #include <cstdint>
 #include <cstring>
@@ -278,6 +278,7 @@ void compute_scharr_derivative_kernelsV2(cv::OutputArray _kx, cv::OutputArray _k
 
     // The standard Scharr kernel
     if (scale == 1) {
+        
         getDerivKernels(_kx, _ky, dx, dy, CV_SCHARR, true, CV_32F);
         return;
     }
